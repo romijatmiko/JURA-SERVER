@@ -39,7 +39,7 @@ app.use(
 app.use(
 	cors({
 		credentials: true,
-		origin: "http://localhost:4000",
+		origin: "https://3f34-2a09-bac1-34a0-28-00-19b-13f.ap.ngrok.io",
 	})
 );
 app.use(express.json());
