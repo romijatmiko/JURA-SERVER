@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize("jurac", "postgres", "romi", {
-	host: "localhost",
+const db = new Sequelize("railway", "postgres", "S44fCmIyba5WJ7yCuv6m", {
+	host: "containers-us-west-66.railway.app",
 	dialect: "postgres",
 });
 
