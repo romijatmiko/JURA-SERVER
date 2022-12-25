@@ -52,6 +52,6 @@ app.use(AuthRoute);
 
 // store.sync();
 
-app.listen(port, () => {
-	console.log(`App listening at http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+	console.log(`App listening at ${process.env.PORT}`);
 });
