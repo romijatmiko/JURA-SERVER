@@ -7,7 +7,6 @@ import SequelizeStore from "connect-session-sequelize";
 import UserRoute from "./routes/userRoute.js";
 import ProductRoute from "./routes/menuRoute.js";
 import AuthRoute from "./routes/authRoute.js";
-import orderDetailsModels from "./models/orderDetailsModels.js";
 import orderDetailsRoute from "./routes/orderDetailsRoute.js";
 
 dotenv.config();
@@ -19,7 +18,7 @@ const sessionStore = SequelizeStore(session.Store);
 const store = new sessionStore({
 	db: db,
 });
-const port = process.env.PORT || 3000;
+const port = process.env.PGPORT;
 
 (async () => {
 	await db.sync();
@@ -52,6 +51,6 @@ app.use(AuthRoute);
 
 // store.sync();
 
-app.listen(process.env.PORT, () => {
-	console.log(`App listening at ${process.env.PORT}`);
+app.listen(port, () => {
+	console.log(`App listening at ${port}`);
 });
