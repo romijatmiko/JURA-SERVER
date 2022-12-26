@@ -39,7 +39,7 @@ app.use(
 app.use(
 	cors({
 		credentials: true,
-		origin: "www.jurachicken.my.id",
+		origin: "https://www.jurachicken.my.id",
 	})
 );
 app.use(express.json());
