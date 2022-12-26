@@ -39,7 +39,7 @@ app.use(
 app.use(
 	cors({
 		credentials: true,
-		origin: "http://localhost:4000",
+		origin: "https://jurachickent-client.vercel.app",
 	})
 );
 app.use(express.json());
