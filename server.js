@@ -18,7 +18,7 @@ const sessionStore = SequelizeStore(session.Store);
 const store = new sessionStore({
 	db: db,
 });
-const port = process.env.PGPORT;
+const port = process.env.PORT;
 
 (async () => {
 	await db.sync();
