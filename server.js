@@ -39,7 +39,7 @@ app.use(
 app.use(
 	cors({
 		credentials: true,
-		origin: "https://1c69-2a09-bac1-34e0-28-00-1f1-1db.ap.ngrok.io/",
+		origin: "https://1c69-2a09-bac1-34e0-28-00-1f1-1db.ap.ngrok.io",
 	})
 );
 app.use(express.json());
