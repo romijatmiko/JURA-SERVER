@@ -39,7 +39,7 @@ app.use(
 app.use(
 	cors({
 		credentials: true,
-		origin: "https://aesthetic-starburst-863860.netlify.app",
+		origin: "https://jurachickent-client-production.up.railway.app",
 	})
 );
 app.use(express.json());
