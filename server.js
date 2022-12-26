@@ -32,7 +32,7 @@ app.use(
 		store: store,
 		cookie: {
 			httpOnly: false,
-			// secure: "auto",
+			secure: "auto",
 		},
 	})
 );
