@@ -31,8 +31,8 @@ app.use(
 		saveUninitialized: true,
 		store: store,
 		cookie: {
-			sameSite: "none",
-			secure: "false",
+			SameSite: "none",
+			secure: "true",
 		},
 	})
 );
@@ -40,7 +40,7 @@ app.use(
 app.use(
 	cors({
 		credentials: true,
-		origin: "https://jurachickent-client-l1liwfe8o-romijatmiko.vercel.app",
+		origin: "https://www.jurachicken.my.id",
 	})
 );
 app.use(express.json());
