@@ -30,11 +30,9 @@ app.use(
 		resave: false,
 		saveUninitialized: true,
 		store: store,
-		proxy: true,
 		cookie: {
-			sameSite: "strict",
+			sameSite: "none",
 			secure: "true",
-			proxy: "true",
 		},
 	})
 );
