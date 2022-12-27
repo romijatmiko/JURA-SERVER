@@ -39,7 +39,7 @@ app.use(
 app.use(
 	cors({
 		credentials: true,
-		origin: "https://www.jurachicken.my.id",
+		origin: "https://jurachickent-client-l1liwfe8o-romijatmiko.vercel.app",
 	})
 );
 app.use(express.json());
