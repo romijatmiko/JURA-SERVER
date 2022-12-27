@@ -32,7 +32,7 @@ app.use(
 		store: store,
 		proxy: true,
 		cookie: {
-			sameSite: "none",
+			sameSite: "strict",
 			secure: "true",
 			proxy: "true",
 		},
