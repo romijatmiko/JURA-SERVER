@@ -33,7 +33,7 @@ app.use(
 		cookie: {
 			httpOnly: true,
 			secure: "true",
-			origin: "https://www.jurachicken.my.id",
+			// origin: "https://www.jurachicken.my.id",
 			sameSite: "none",
 		},
 	})
