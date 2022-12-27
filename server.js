@@ -30,6 +30,7 @@ app.use(
 		resave: false,
 		saveUninitialized: true,
 		store: store,
+		proxy: true,
 		cookie: {
 			sameSite: "none",
 			secure: "true",
@@ -41,6 +42,7 @@ app.use(
 app.use(
 	cors({
 		credentials: true,
+		origin: "https://www.jurachicken.my.id",
 	})
 );
 app.use(express.json());
