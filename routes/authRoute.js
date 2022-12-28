@@ -3,7 +3,7 @@ import { Login, logOut, Me } from "../controllers/auth.js";
 
 const router = express.Router();
 
-router.get("/me/:id", Me);
+router.get("/me", Me);
 router.post("/login", Login);
 router.delete("/logout", logOut);
 
