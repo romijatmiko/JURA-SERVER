@@ -28,6 +28,9 @@ export const Me = async (req, res) => {
 			"updatedAt",
 			"role",
 		],
+		where: {
+			uuid: uuid,
+		},
 	});
 	if (!user) return res.status(404).json({ msg: "User tidak ditemukan" });
 	res.status(200).json(user);
