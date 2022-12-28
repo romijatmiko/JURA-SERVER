@@ -31,6 +31,7 @@ app.use(
 		saveUninitialized: true,
 		store: store,
 		cookie: {
+			secure: true,
 			sameSite: "none",
 			httpOnly: true,
 			domain: "www.jurachicken.my.id",
