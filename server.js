@@ -52,7 +52,7 @@ app.use(UserRoute);
 app.use(ProductRoute);
 app.use(AuthRoute);
 
-// store.sync();
+store.sync();
 
 app.listen(port, () => {
 	console.log(`App listening at ${port}`);
