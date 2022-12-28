@@ -31,10 +31,10 @@ app.use(
 		saveUninitialized: true,
 		store: store,
 		cookie: {
-			secure: true,
+			secure: "auto",
 			sameSite: "none",
 			httpOnly: true,
-			domain: "https://www.jurachicken.my.id",
+			domain: "https://jura-server-production.up.railway.app",
 		},
 	})
 );
