@@ -13,28 +13,28 @@ dotenv.config();
 
 const app = express();
 
-// const sessionStore = SequelizeStore(session.Store);
+const sessionStore = SequelizeStore(session.Store);
 
-// const store = new sessionStore({
-// 	db: db,
-// });
+const store = new sessionStore({
+	db: db,
+});
 const port = process.env.PORT;
 
 (async () => {
 	await db.sync();
 })();
 
-// app.use(
-// 	session({
-// 		secret: process.env.TOKEN_IN,
-// 		resave: false,
-// 		saveUninitialized: true,
-// 		store: store,
-// 		cookie: {
-// 			secure: "auto",
-// 		},
-// 	})
-// );
+app.use(
+	session({
+		secret: process.env.TOKEN_IN,
+		resave: false,
+		saveUninitialized: true,
+		store: store,
+		cookie: {
+			secure: "auto",
+		},
+	})
+);
 
 app.use(
 	cors({
