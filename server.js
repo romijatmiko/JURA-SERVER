@@ -31,7 +31,7 @@ app.use(
 		saveUninitialized: true,
 		store: store,
 		cookie: {
-			secure: "true",
+			secure: "auto",
 		},
 	})
 );
