@@ -19,7 +19,7 @@ export const Login = async (req, res) => {
 };
 
 export const Me = async (req, res) => {
-	if (!req.userId) {
+	if (!email_user) {
 		return res.status(401).json({ msg: "Mohon login ke akun Anda!" });
 	}
 	const user = await user_jura.findOne({
