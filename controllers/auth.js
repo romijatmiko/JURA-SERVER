@@ -32,7 +32,7 @@ export const Me = async (req, res) => {
 			"role",
 		],
 		where: {
-			uuid: req.userId,
+			uuid: userId,
 		},
 	});
 	if (!user) return res.status(404).json({ msg: "User tidak ditemukan" });
