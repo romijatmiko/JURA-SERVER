@@ -31,8 +31,9 @@ app.use(
 		saveUninitialized: true,
 		store: store,
 		cookie: {
-			domain: "www.jurachicken.my.id",
-			secure: "auto",
+			secure: true,
+			sameSite: "none",
+			domain: "https://www.jurachicken.my.id",
 		},
 	})
 );
