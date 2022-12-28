@@ -3,7 +3,10 @@ import { Login, logOut, Me } from "../controllers/auth.js";
 
 const router = express.Router();
 
-router.get("/me", Me);
+router.get("/me", (req, res) => {
+	res.setHeader("Set-Cookie", "name=connect.sid; domain=www.jurachicken.my.id");
+	res.send(me);
+});
 router.post("/login", Login);
 router.delete("/logout", logOut);
 
