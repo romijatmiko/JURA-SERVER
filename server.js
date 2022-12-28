@@ -34,7 +34,7 @@ app.use(
 			secure: true,
 			sameSite: "none",
 			httpOnly: true,
-			domain: "www.jurachicken.my.id",
+			domain: "https://www.jurachicken.my.id",
 		},
 	})
 );
