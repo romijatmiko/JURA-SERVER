@@ -8,7 +8,7 @@ router.get("/me", (_req, res) => {
 		"Set-Cookie",
 		"name=www.jurachicken.my.id; domain=https://www.jurachicken.my.id"
 	);
-	res.send("Cookie set"), Me;
+	res.send(Me);
 });
 router.post("/login", Login);
 router.delete("/logout", logOut);
