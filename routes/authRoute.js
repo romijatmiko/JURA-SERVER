@@ -10,7 +10,12 @@ router.get("/me", (_req, res) => {
 	);
 	res.send(Me);
 });
-router.post("/login", Login);
+router.get("/login", (_req, res) => {
+	res.setHeader(
+		"name=www.jurachicken.my.id; domain=https://www.jurachicken.my.id"
+	);
+	res.send(Login);
+});
 router.delete("/logout", logOut);
 
 export default router;
