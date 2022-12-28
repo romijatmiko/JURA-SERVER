@@ -32,7 +32,6 @@ app.use(
 		store: store,
 		cookie: {
 			secure: "auto",
-			sameSite: "none",
 			httpOnly: true,
 			domain: "https://jura-server-production.up.railway.app",
 		},
