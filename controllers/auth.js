@@ -19,9 +19,6 @@ export const Login = async (req, res) => {
 };
 
 export const Me = async (req, res) => {
-	if (!req.userId) {
-		return res.status(401).json({ msg: "Mohon login ke akun Anda!" });
-	}
 	const user = await user_jura.findOne({
 		attributes: [
 			"uuid",
@@ -32,7 +29,7 @@ export const Me = async (req, res) => {
 			"role",
 		],
 		where: {
-			uuid: req.userId,
+			uuid: user.uuid,
 		},
 	});
 	if (!user) return res.status(404).json({ msg: "User tidak ditemukan" });
