@@ -31,8 +31,9 @@ app.use(
 		saveUninitialized: true,
 		store: store,
 		cookie: {
-			secure: "auto",
-			httpOnly: true,
+			domain: "www.jurachicken.my.id",
+			secure: true,
+			sameSite: "none",
 			domain: "https://jura-server-production.up.railway.app",
 		},
 	})
