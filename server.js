@@ -33,7 +33,6 @@ app.use(
 		cookie: {
 			sameSite: "none",
 			httpOnly: true,
-			secure: "auto",
 			domain: "www.jurachicken.my.id",
 		},
 	})
