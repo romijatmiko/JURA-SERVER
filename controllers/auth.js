@@ -19,7 +19,7 @@ export const Login = async (req, res) => {
 };
 
 export const Me = async (req, res) => {
-	if (!email_user) {
+	if (!req.userId) {
 		return res.status(401).json({ msg: "Mohon login ke akun Anda!" });
 	}
 	const user = await user_jura.findOne({
@@ -32,7 +32,7 @@ export const Me = async (req, res) => {
 			"role",
 		],
 		where: {
-			uuid: userId,
+			uuid: req.userId,
 		},
 	});
 	if (!user) return res.status(404).json({ msg: "User tidak ditemukan" });
@@ -40,7 +40,7 @@ export const Me = async (req, res) => {
 };
 
 export const logOut = (req, res) => {
-	req.userId.destroy((err) => {
+	req.session.destroy((err) => {
 		if (err) return res.status(400).json({ msg: "Tidak dapat logout" });
 		res.status(200).json({ msg: "Anda telah logout" });
 	});
