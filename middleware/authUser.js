@@ -1,12 +1,12 @@
 import User from "../models/userModels.js";
 
 export const verifyUser = async (req, res, next) => {
-	if (!req.session.userId) {
+	if (!req.userId) {
 		return res.status(401).json({ msg: "Mohon login ke akun Anda!" });
 	}
 	const user = await User.findOne({
 		where: {
-			uuid: req.session.userId,
+			uuid: req.userId,
 		},
 	});
 	if (!user) return res.status(404).json({ msg: "User tidak ditemukan" });
@@ -18,7 +18,7 @@ export const verifyUser = async (req, res, next) => {
 export const adminOnly = async (req, res, next) => {
 	const user = await User.findOne({
 		where: {
-			uuid: req.session.userId,
+			uuid: req.userId,
 		},
 	});
 	if (!user) return res.status(404).json({ msg: "User tidak ditemukan" });
