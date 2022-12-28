@@ -32,7 +32,7 @@ app.use(
 		store: store,
 		cookie: {
 			secure: true,
-			sameSite: "none",
+			httpOnly: true,
 			domain: "https://www.jurachicken.my.id",
 		},
 	})
