@@ -32,8 +32,7 @@ app.use(
 		store: store,
 		cookie: {
 			secure: "secure",
-			sameSite: "none",
-			domain: ".jurachicken.my.id",
+			domain: "https://www.jurachicken.my.id",
 		},
 	})
 );
